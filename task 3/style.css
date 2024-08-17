@@ -1,0 +1,91 @@
+/* Default styles */
+/**{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}*/
+
+body {
+    background-color: #CADA81;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(4, 4, 105);
+    font-size: 30px;
+    text-align: center;
+}
+
+p {
+    color: darkgreen;
+    font-size: 20px;
+    background-color: rgb(240, 240, 148);
+    padding: 10px;
+}
+
+.f{
+    border: 1.5px solid black;
+    height: 250px;
+    width: 300px;
+    margin-left: 40%;
+}
+
+/* Media Queries */
+
+/* For devices with a width of 600px or less */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    img {
+        width: 100px;
+        height: auto;
+    }
+}
+
+/* For devices with a width between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 30px;
+    }
+    
+    p {
+        font-size: 18px;
+        padding: 9px;
+    }
+
+    img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+/* For devices with a width of 901px or more */
+@media (min-width: 901px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    p {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    img {
+        width: 150px;
+        height: auto;
+    }
+}

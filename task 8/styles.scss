@@ -1,0 +1,93 @@
+// styles.scss
+
+// Define variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-size-base: 1rem;
+$font-size-lg: 1.25rem;
+$font-family-base: 'Arial, sans-serif';
+
+// Global styles
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $secondary-color;
+  margin: 20px;
+}
+
+h1 {
+  color: $primary-color;
+  font-size: $font-size-lg;
+}
+
+// Navbar styles
+.navbar {
+  background-color: $primary-color;
+  .navbar-brand {
+    color: white;
+    &:hover {
+      color: darken(white, 10%);
+    }
+  }
+  .nav-link {
+    color: white;
+    &:hover {
+      color: darken(white, 10%);
+    }
+  }
+}
+
+// Form styles
+.form-group {
+  margin-bottom: 1rem;
+
+  label {
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid $secondary-color;
+    border-radius: 0.25rem;
+  }
+
+  .text-danger {
+    font-size: 0.875em;
+    color: red;
+  }
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// styles.scss
+
+@mixin button-styles($bg-color) {
+    padding: 0.5rem 1rem;
+    background-color: $bg-color;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: darken($bg-color, 10%);
+    }
+  }
+  
+  button {
+    @include button-styles($primary-color);
+  }
+  

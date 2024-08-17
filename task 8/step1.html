@@ -1,0 +1,21 @@
+<!--Initialize npm in your project:-->
+npm init -y
+
+<!--Install Sass:-->
+npm install sass --save-dev
+
+<!--step 2-->
+/my-project
+  /css
+    styles.css
+  /scss
+    styles.scss
+  index.html
+  package.json
+
+  <!--step 4-->
+  npx sass scss/styles.scss css/styles.css
+
+  npx sass --watch scss/styles.scss:css/styles.css
+
+  
