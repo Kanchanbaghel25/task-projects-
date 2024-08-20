@@ -1,11 +1,50 @@
-body {
-    font-family: Arial, sans-serif;
+/* custom.css */
+
+/* Customize the navigation bar */
+.navbar {
+    background-color: #2c3e50;
 }
 
-h1 {
-    color: #333;
+.navbar-brand,
+.nav-link {
+    color: #ecf0f1 !important;
 }
 
-.text-danger {
-    font-size: 0.875em;
+.nav-link.active {
+    font-weight: bold;
+    color: #e74c3c !important;
 }
+
+/* Customize the hero section */
+header {
+    background: url('../assets/images/hero-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Feature section styling */
+h2 {
+    font-weight: 600;
+    color: #34495e;
+}
+
+p {
+    color: #7f8c8d;
+}
+
+.btn-secondary {
+    background-color: #2ecc71;
+    border-color: #27ae60;
+}
+
+.btn-secondary:hover {
+    background-color: #27ae60;
+    border-color: #1e8449;
+}
+
+/* Footer styling */
+footer {
+    background-color: #34495e;
+}
+

@@ -1,28 +1,19 @@
-function validateForm() {
-    const title = document.getElementById('title').value.trim();
-    const body = document.getElementById('body').value.trim();
-    let isValid = true;
+document.addEventListener('DOMContentLoaded', function () {
+    // Example: Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    if (title === '') {
-        isValid = false;
-        showError('titleError', 'Title is required');
-        document.getElementById('title').classList.add('is-invalid');
-    } else {
-        clearError('titleError');
-        document.getElementById('title').classList.remove('is-invalid');
-    }
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
 
-    if (body === '') {
-        isValid = false;
-        showError('bodyError', 'Body is required');
-        document.getElementById('body').classList.add('is-invalid');
-    } else {
-        clearError('bodyError');
-        document.getElementById('body').classList.remove('is-invalid');
-    }
-
-    if (isValid) {
-        console.log('Form submitted successfully');
-        // Handle form submission (e.g., send data to the server)
-    }
-}
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70, // Offset for fixed navbar
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
